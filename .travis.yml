@@ -1,10 +1,21 @@
-language: python
-python:
-- 3.6
-install:
-- pip install -r requirements.txt
-script:
-- python3 test.py
+matrix:
+  include:
+    - language: python
+      python: 
+        - 3.6
+      install: 
+        - pip install -r requirements.txt
+      script:
+        - python test.py
+
+    - language: node_js
+      node_js:
+        - 4.8
+      install:
+        - npm install --save-dev ava
+      script:
+        - npm test
+
 deploy:
   provider: heroku
   api_key:
@@ -12,3 +23,4 @@ deploy:
   app: lego-heroku-control
   on:
     repo: tommcn/lego-heroku-control
+        

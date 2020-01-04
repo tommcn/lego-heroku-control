@@ -5,6 +5,7 @@ h1 {
 footer {
   color: lightgray;
   font-size: 12px;
+  text-align: center;
 }
 
 #console {
