@@ -10,7 +10,7 @@ matrix:
 
     - language: node_js
       node_js:
-        - 4.8
+        - 10.16.3
       install:
         - npm install --save-dev ava
       script:
