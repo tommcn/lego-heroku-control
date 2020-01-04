@@ -1,27 +1,28 @@
 matrix:
   include:
-    - language: python
-      python: 
-        - 3.6
-      install: 
-        - pip install -r requirements.txt
-      script:
-        - python test.py
+    - stage: test
+      - language: python
+        python: 
+          - 3.6
+        install: 
+          - pip install -r requirements.txt
+        script:
+          - python test.py
 
-    - language: node_js
-      node_js:
-        - 10.16.3
-      install:
-        - npm install --save-dev ava
-        - npm install --save-dev browser-env
-      script:
-        - npm test
-
-deploy:
-  provider: heroku
-  api_key:
-    secure: fytnAdDaU8kp4ExMk7xw5PttzG0uHKo+8e/QvqHJZlI1PlX5InD71yMgPnq7J8grMwTvErtsKCZ6GaaWiAT8Ni/LU0sPYFTNiUUoZErj9K4FuezC7oHKFVIZrWER5WtJTXjFIOchujU9E35Nsy0rAXQKuA/NLntEnHc3jCaRC7FKID2cBdlYV+GJeudc8l1u1GCpSGVHuhqbdhz+D4HGjDuraTZOdxsJnAbe63dGx8txd2ad3Pc4Wv4KMuq9Es/BvIgAX6umrZEc2ZqYnnEIu5I/M9HGvTXwfUtw2eYhV8+5LixHpXRYZADxIh9II4H7MRa/NwFd9pK5Yw/lubV4X7foXJiRC/JnsnT4gS7IiCDnuaQrB4g60JuyPZYNJ5on+yW7Kv6Z18nCHPuepZpVQkZCf8U7GIL3V7smwKGP0A7ud6yKERrwePMtxwNhe07mvUf1bSM4L86gGKfO82m236+bkNd050b5+TAKAIvUpUsRzTv9RjWwq1WcErlNQYaPGBSgNbk4AO26nGHjDeoSjmNkeNhC08YYEzVqouZ0CdfiGa12m2stACRB8iwH5gaPq6uH/aQ0PlPVwslYpUnl893WiiISIkePlJJfcXKQ/d+ItK+6Q7rHFmgQEcZbYatpl+guEbMTf9olYdsJIx5FEoMckD8Z/MzUsbGahWcb9L4=
-  app: lego-heroku-control
-  on:
-    repo: tommcn/lego-heroku-control
-        
+      - language: node_js
+        node_js:
+          - 10.16.3
+        install:
+          - npm install --save-dev ava
+          - npm install --save-dev browser-env
+        script:
+          - npm test
+    - stage: deploy
+      deploy:
+        provider: heroku
+        api_key:
+          secure: fytnAdDaU8kp4ExMk7xw5PttzG0uHKo+8e/QvqHJZlI1PlX5InD71yMgPnq7J8grMwTvErtsKCZ6GaaWiAT8Ni/LU0sPYFTNiUUoZErj9K4FuezC7oHKFVIZrWER5WtJTXjFIOchujU9E35Nsy0rAXQKuA/NLntEnHc3jCaRC7FKID2cBdlYV+GJeudc8l1u1GCpSGVHuhqbdhz+D4HGjDuraTZOdxsJnAbe63dGx8txd2ad3Pc4Wv4KMuq9Es/BvIgAX6umrZEc2ZqYnnEIu5I/M9HGvTXwfUtw2eYhV8+5LixHpXRYZADxIh9II4H7MRa/NwFd9pK5Yw/lubV4X7foXJiRC/JnsnT4gS7IiCDnuaQrB4g60JuyPZYNJ5on+yW7Kv6Z18nCHPuepZpVQkZCf8U7GIL3V7smwKGP0A7ud6yKERrwePMtxwNhe07mvUf1bSM4L86gGKfO82m236+bkNd050b5+TAKAIvUpUsRzTv9RjWwq1WcErlNQYaPGBSgNbk4AO26nGHjDeoSjmNkeNhC08YYEzVqouZ0CdfiGa12m2stACRB8iwH5gaPq6uH/aQ0PlPVwslYpUnl893WiiISIkePlJJfcXKQ/d+ItK+6Q7rHFmgQEcZbYatpl+guEbMTf9olYdsJIx5FEoMckD8Z/MzUsbGahWcb9L4=
+        app: lego-heroku-control
+        on:
+          repo: tommcn/lego-heroku-control
+              
