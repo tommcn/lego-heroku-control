@@ -1,6 +1,7 @@
 matrix:
   include:
     - stage: test
+      name: flask application tests
       language: python
       python: 
         - 3.6
@@ -9,6 +10,7 @@ matrix:
       script:
         - python test.py
     - stage: test
+      name: JS app tests
       language: node_js
       node_js:
         - 10.16.3
@@ -18,6 +20,7 @@ matrix:
       script:
         - npm test
     - stage: deploy
+      name: deploy to heroku
       script: skip
       deploy: &heroku
         provider: heroku
