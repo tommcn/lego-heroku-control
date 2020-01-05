@@ -31,8 +31,10 @@ matrix:
     - stage: deploy
       name: deploy to github pages
       script: skip
-      local_dir: templates
       deploy: &pages
         provider: pages
         skip_cleanup: true          
-        github_token: $GITHUB_TOKEN    
+        github_token: $GITHUB_TOKEN
+        local_dir: 
+          - templates   
+          - static
