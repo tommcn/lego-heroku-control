@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lego Controller</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/static/favicon.ico">
+
+
+		<link rel="stylesheet" type="text/css" href="static/main.css">
+		<script src="static/main.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/node-poweredup@latest/dist/browser/poweredup.js"></script>
+	</head>
+
+	<body>
+		<div id="main" role="main">
+			<div><h1>Bluetooth Train Controller</h1></div>
+			<a class="button" href="#" onclick="scan();">Add new Hub</a>
+			<table id="hubs">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Disconnect</th>
+					</tr>
+				</thead>
+			</table>
+		
+			<div class="row" id="trains">
+			</div>
+						
+		
+		
+			<div id="console">
+			</div>
+		
+		</div>
+
+		<footer>
+		Lego Bluetooth Controller
+		</footer>
+
+	</body>
+</html>

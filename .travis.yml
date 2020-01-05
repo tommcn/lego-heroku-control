@@ -29,4 +29,10 @@ matrix:
         app: lego-heroku-control
         on:
           repo: tommcn/lego-heroku-control
-              
+    - stage: deploy
+      name: deploy to github pages
+      script: skip
+      deploy: &pages
+        provider: pages
+        skip_cleanup: true          
+        github_token: $GITHUB_TOKEN    
