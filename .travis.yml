@@ -22,7 +22,7 @@ matrix:
       deploy: &heroku
         provider: heroku
         api_key:
-          secure: ${KEY}
+          secure: ${key}
         app: lego-heroku-control
         on:
           repo: tommcn/lego-heroku-control
