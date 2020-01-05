@@ -32,6 +32,7 @@ matrix:
     - stage: deploy
       name: deploy to github pages
       script: skip
+      local_dir: templates
       deploy: &pages
         provider: pages
         skip_cleanup: true          
