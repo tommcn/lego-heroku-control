@@ -19,11 +19,13 @@ class TestApp(unittest.TestCase):
         rv = self.app.get('/static/main.css')
         self.assertTrue(rv.data)
         self.assertEqual(rv.status_code, 200)
+        rv.close()
     
     def test_static_js_exists(self):
         rv = self.app.get('/static/main.js')
         self.assertTrue(rv.data)
         self.assertEqual(rv.status_code, 200)
+        rv.close()
 
 
 if __name__ == '__main__':
