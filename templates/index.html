@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 
@@ -11,32 +11,38 @@
 		<script src="https://cdn.jsdelivr.net/npm/node-poweredup@latest/dist/browser/poweredup.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="static/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="static/main.js"></script>
 
 	</head>
 
-	<body>
-		<div id="main" role="main">
-			<div><h1>Bluetooth Train Controller</h1></div>
-			<a class="button" href="#" onclick="scan();">Add new Hub</a>
-			<table id="hubs">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Disconnect</th>
-					</tr>
-				</thead>
-			</table>
+	<body style="background-color: black;">
+		<div><h1 id="title">Bluetooth Lego Train Controller</h1></div>
+		<a class="button" href="#" onclick="scan();">Add new Hub</a>
+		<table id="hubs">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Disconnect</th>
+				</tr>
+			</thead>
+		</table>
+	
+		<div class="row" id="trains">
+		</div>
+					
+	
+	
+		<div id="console">
+		</div>
 		
-			<div class="row" id="trains">
-			</div>
-						
 		
-		
-			<div id="console">
-			</div>
-		
+		<div id="buttons">
+			<button type="button" class="btn btn-primary" onclick="document.documentElement.requestFullscreen();">Enter Fullscreen</button>
+			<button type="button" class="btn btn-info" onclick="document.exitFullscreen();">Exit Fullscreen</button>
+			<button type="button" class="btn btn-warning" onclick="window.location.reload();">Refresh Page</button>
+
 		</div>
 
 		<footer>

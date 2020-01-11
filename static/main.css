@@ -1,18 +1,30 @@
-h1 {
-    color: red;
-}
-
 footer {
   color: lightgray;
   font-size: 12px;
   text-align: center;
+  margin-top: 15px;
 }
+
+#title {
+  text-align: center;
+  color: red;
+}
+
+#buttons {
+  text-align: center;
+}
+
 
 #console {
     font-family: monospace;
     background-color: black;
     color: white;
-} 
+    padding: 25px;
+}
+
+#hubs {
+  color: #b1b1b1;
+}
 
 /* Float four columns side by side */
 .column {
