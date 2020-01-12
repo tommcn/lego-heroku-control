@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lego Controller</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/static/favicon.ico">
+
+		<script src="https://cdn.jsdelivr.net/npm/node-poweredup@latest/dist/browser/poweredup.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="static/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="static/main.js"></script>
+
+	</head>
+
+	<body style="background-color: black;">
+		<div><h1 id="title">Bluetooth Lego Train Controller</h1></div>
+		<a class="button" href="#" onclick="scan();">Add new Hub</a>
+		<table id="hubs">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Disconnect</th>
+				</tr>
+			</thead>
+		</table>
+	
+		<div class="row" id="trains">
+		</div>
+					
+	
+	
+		<div id="console">
+		</div>
+		
+		
+		<div id="buttons">
+			<button type="button" class="btn btn-primary" onclick="document.documentElement.requestFullscreen();">Enter Fullscreen</button>
+			<button type="button" class="btn btn-info" onclick="document.exitFullscreen();">Exit Fullscreen</button>
+			<button type="button" class="btn btn-warning" onclick="window.location.reload();">Refresh Page</button>
+
+		</div>
+
+		<footer>
+		Lego Bluetooth Controller
+		</footer>
+
+	</body>
+</html>
