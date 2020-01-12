@@ -76,5 +76,18 @@ const disconnect = function (uuid) {
     document.getElementById(`id-${uuid}`).remove();
 }
 
-
+function createWindow () {
+    // Create the browser window.
+    let win = new BrowserWindow({
+      width: 800,
+      height: 600,
+      webPreferences: {
+        nodeIntegration: true
+      }
+    })
+  
+    // and load the index.html of the app.
+    win.loadFile('../templates/index.html')
+  }
+  
 

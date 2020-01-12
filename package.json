@@ -1,10 +1,28 @@
 {
-	"name": "awesome-package",
-	"scripts": {
-		"test": "ava"
-	},
-	"devDependencies": {
-		"ava": "^1.4.1",
-		"browser-env": "^3.3.0"
-	}
+  "name": "lego-bluetooth-control",
+  "scripts": {
+    "test": "ava",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "browser-env": "^3.3.0",
+    "electron": "^7.1.8"
+  },
+  "description": "Heroku: https://lego-heroku-control.herokuapp.com/#   GitHub Pages: https://tommcn.github.io/lego-heroku-control/#",
+  "version": "1.0.0",
+  "main": "static/main.js",
+  "dependencies": {
+    "node-poweredup": "^5.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommcn/lego-heroku-control.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommcn/lego-heroku-control/issues"
+  },
+  "homepage": "https://github.com/tommcn/lego-heroku-control#readme"
 }
